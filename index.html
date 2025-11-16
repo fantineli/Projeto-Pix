@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>PIX Monitor</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        
+        <header class="status-hero-card">
+            <h1 class="hero-title">Status do Sistema PIX</h1>
+            
+            <div id="pix-status-wrapper" aria-live="polite">
+                <div id="pix-status" class="status-badge" data-status="desconhecido">
+                    Carregando...
+                </div>
+            </div>
+            
+            <div class="meta">
+                Última verificação: <span id="updated-at">-</span>
+            </div>
+        </header>
+
+        <section class="history-card">
+            <button class="history-btn" id="historyBtn" aria-expanded="false" aria-controls="historyLogContainer">
+                
+                <span id="history-btn-text">Ver Histórico</span>
+                
+                <span class="chevron" aria-hidden="true"></span>
+            </button>
+            
+            <div class="history-log-wrapper" id="historyLogContainer" style="display:none;">
+                <ul id="historyLogList">
+                    <li>Carregando histórico...</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
